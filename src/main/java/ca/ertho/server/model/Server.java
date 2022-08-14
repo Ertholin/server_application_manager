@@ -1,6 +1,6 @@
 package ca.ertho.server.model;
 
-import ca.ertho.server.enumaration.Status;
+import ca.ertho.server.enumeration.Status;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

@@ -1,4 +1,4 @@
-package ca.ertho.server.enumaration;
+package ca.ertho.server.enumeration;
 
 public enum Status {
     SERVER_UP("SERVER_UP"),

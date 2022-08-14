@@ -1,0 +1,22 @@
+spring:
+  datasource:
+#    url: jdbc:mysql://localhost:3306/gestionstock?createDatabaseIfNotExist=true&userSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: root
+    password: ertho
+    url: jdbc:mysql://localhost:3306/serverdb
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  ## Specify DBMS
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        ejb:
+          interceptor: com.ertho.gestiondestosck.interceptor.Interceptor
+
+    # Hibernate DDL Auto (create, create-drop, update)
+    hibernate:
+      ddl-auto : create
+      dialect: org.hibernate.dialect.MySQL8Dialect
+#server:
+#  port: 8081
