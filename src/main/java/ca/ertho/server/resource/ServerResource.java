@@ -31,16 +31,15 @@ public class ServerResource {
     @GetMapping("/list")
     public ResponseEntity<Response> getServers() throws InterruptedException {
         TimeUnit.SECONDS.sleep(3);
-        throw new InterruptedException("Something went wrong");
-//        return ResponseEntity.ok(
-//                Response.builder()
-//                        .timeStamp(now())
-//                        .data(of("servers", serverService.list(30)))
-//                        .message("Servers retrieved")
-//                        .status(OK)
-//                        .statusCode(OK.value())
-//                        .build()
-//        );
+        return ResponseEntity.ok(
+                Response.builder()
+                        .timeStamp(now())
+                        .data(of("servers", serverService.list(30)))
+                        .message("Servers retrieved")
+                        .status(OK)
+                        .statusCode(OK.value())
+                        .build()
+        );
     }
 
     @GetMapping("/ping/{ipAddress}")
